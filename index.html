@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ephraim Mulilo’s Resume</title>
+  <style>
+    /* Global Styles */
+    body {
+      background-color: #000;
+      color: #d0d0d0;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #d0d0d0;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Blinking cursor element at the top */
+    .cursor {
+      display: inline-block;
+      background-color: #d0d0d0;
+      width: 10px;
+      height: 1em;
+      vertical-align: bottom;
+      margin-left: 5px;
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Vim-inspired dynamic colors */
+    .dynamic-color {
+      animation: changeColor 5s ease-in-out infinite;
+    }
+
+    @keyframes changeColor {
+      0%   { color: #66d9ef; }   /* blue-ish */
+      25%  { color: #a6e22e; }   /* green-ish */
+      50%  { color: #fd971f; }   /* orange-ish */
+      75%  { color: #f92672; }   /* red-ish */
+      100% { color: #66d9ef; }
+    }
+    
+    /* Section styling */
+    .section {
+      margin: 20px 0;
+      padding: 10px;
+      border-left: 2px solid #444;
+      padding-left: 10px;
+    }
+    
+    h1, h2, h3 {
+      margin: 10px 0 5px;
+      padding: 0;
+    }
+    
+    /* Hover effect mimicking a cursor-line */
+    .hover-cursor:hover {
+      background-color: rgba(255,255,255,0.1);
+      cursor: text;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with blinking cursor -->
+  <header>
+    <h1 class="dynamic-color">Ephraim Mulilo<span class="cursor"></span></h1>
+    <p class="dynamic-color">
+      Chingola, Zambia &nbsp;|&nbsp;
+      <a href="mailto:e.mulilo1@alustudent.com">e.mulilo1@alustudent.com</a> &nbsp;|&nbsp;
+      +260973370564
+    </p>
+  </header>
+
+  <!-- Professional Summary -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Professional Summary</h2>
+    <p>
+      Motivated Software Engineering student proficient in Python, JavaScript, Git, and Docker. Passionate about developing scalable applications and solving complex problems with innovative solutions. Actively engaged in initiatives that drive STEM education and technological growth, evidenced by leadership in robotics competitions and hands-on industry experience.
+    </p>
+  </div>
+
+  <!-- Education -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Education</h2>
+    <p>
+      <strong>Bachelor of Science in Software Engineering</strong><br>
+      The African Leadership University, Chingola, Zambia<br>
+      <em>Expected Graduation: 2026</em><br>
+      Relevant Coursework: Data Structures & Algorithms, Database Systems, Software Engineering, Object-Oriented Programming, Operating Systems
+    </p>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Technical Skills</h2>
+    <p>
+      <strong>Languages:</strong> Python, JavaScript<br>
+      <strong>Tools & Technologies:</strong> Git, Docker, REST APIs, Agile Development, Linux/Unix<br>
+      <strong>Concepts:</strong> Object-Oriented Programming, Data Structures, Software Testing, DevOps Fundamentals
+    </p>
+  </div>
+
+  <!-- Projects & Experience -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Projects & Experience</h2>
+    <h3 class="dynamic-color">Zambia Robotics</h3>
+    <p>
+      <em>STEM Initiative & Competitive Robotics Program</em><br>
+      Spearheaded an initiative to promote STEM education in Zambia through organizing and managing competitive robotics events.<br>
+      <strong>Technologies Used:</strong> Microcontrollers, Python-based control systems, sensor integration<br>
+      <strong>Contributions:</strong> Developed programming challenges, coordinated with educators and sponsors, and mentored team members.
+    </p>
+    <h3 class="dynamic-color">Underwriting Assistant at ZSIC General Insurance Chililabombwe</h3>
+    <p>
+      <em>May 2024 – Present</em><br>
+      Managed and organized insurance data systems for administrative tasks, streamlined workflow processes via software solutions, and contributed automation scripts.
+    </p>
+  </div>
+
+  <!-- Extracurricular Activities & Leadership -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Extracurricular Activities & Leadership</h2>
+    <p>
+      Active member of the Coding and Robotics Club at The African Leadership University<br>
+      Participated in multiple regional hackathons, building innovative software solutions<br>
+      Volunteer mentor in local STEM education programs
+    </p>
+  </div>
+
+  <!-- Online Presence -->
+  <div class="section hover-cursor">
+    <h2 class="dynamic-color">Online Presence</h2>
+    <p>
+      <a href="https://github.com/ephraimm-zm" target="_blank">GitHub</a> &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/ephraim-mulilo/" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+
+  <!-- Additional interactive elements via JavaScript -->
+  <script>
+    document.querySelectorAll('.hover-cursor').forEach(element => {
+      element.addEventListener('mouseover', () => {
+        element.style.color = "#ffffff";  // Change color to white on hover
+      });
+      element.addEventListener('mouseout', () => {
+        element.style.color = "";  // Revert back to dynamic color
+      });
+    });
+  </script>
+</body>
+</html>
