@@ -27,7 +27,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <p>Currently building from Chililabombwe, Zambia · {new Date().getFullYear()}</p>
                 <div className="footer-links">
                     <a href="https://github.com/ephraimm-zm" target="_blank" rel="noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/in/ephraim-mulilo/" target="_blank" rel="noreferrer">LinkedIn</a>
                     <a href="mailto:e.mulilo1@alustudent.com">Email</a>
                 </div>
             </footer>

@@ -36,7 +36,7 @@ const experiences = [
 ];
 
 const education = {
-  school: 'African Leadership University — Chingola, Zambia',
+  school: 'African Leadership University — Kigali, Rwanda',
   degree: 'B.Sc. Software Engineering',
   grad: 'Expected 2026',
   coursework: 'Data Structures & Algorithms, Database Systems, Operating Systems, OOP, Software Engineering'
@@ -59,9 +59,7 @@ const Home: React.FC = () => {
               <a className="ghost" href="mailto:e.mulilo1@alustudent.com">Email me</a>
             </div>
             <div className="hero-meta">
-              <span>Chingola · Zambia</span>
-              <span>+260 973 370 564</span>
-              <span>e.mulilo1@alustudent.com</span>
+              <span>Chililabombwe · Zambia</span>
             </div>
           </div>
           <div className="hero-card">
@@ -135,7 +133,6 @@ const Home: React.FC = () => {
           </div>
           <div className="hero-actions">
             <a className="primary" href="mailto:e.mulilo1@alustudent.com">Email Ephraim</a>
-            <a className="ghost" href="https://www.linkedin.com/in/ephraim-mulilo/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="ghost" href="https://github.com/ephraimm-zm" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </section>
