@@ -4,13 +4,7 @@ import type { Project } from '../data/projects';
 type ProjectCardProps = Project;
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link, comingSoon }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <div className="project-card" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-            <div className="project-card__header" onClick={() => setIsOpen(!isOpen)}>
-                <div>
-                    <p className="project-card__eyebrow">Selected work</p>
+  const [isOpen, setIsOpen] = useState(true);
                     <h3 className="project-title">{title}</h3>
                 </div>
                 <span className={`project-toggle ${isOpen ? 'open' : ''}`}>▾</span>
