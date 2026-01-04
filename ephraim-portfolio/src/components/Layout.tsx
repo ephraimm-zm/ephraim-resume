@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const handleExportPDF = () => {
+        setMenuOpen(false);
+        window.print();
+    };
+
     return (
         <div className="shell">
             <div className="grid-overlay" aria-hidden="true" />
@@ -32,6 +37,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
                     <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
                     <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+                    <button className="pdf-export" onClick={handleExportPDF}>
+                        Export to PDF
+                    </button>
                 </nav>
             </header>
 
