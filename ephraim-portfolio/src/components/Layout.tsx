@@ -9,7 +9,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     <span className="brand__dot" />
                     <div>
                         <p className="brand__eyebrow">Ephraim Mulilo</p>
-                        <p className="brand__title">Software Developer</p>
+                        <p className="brand__title">Software Engineer</p>
                     </div>
                 </div>
                 <nav className="site-nav">
