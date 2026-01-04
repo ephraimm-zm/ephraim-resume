@@ -58,14 +58,20 @@ a:hover {
 
 .site-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 12px 16px;
     border: 1px solid var(--card-border);
     border-radius: var(--radius);
     background: var(--panel);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
+}
+
+.brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .brand {
@@ -96,26 +102,64 @@ a:hover {
     font-weight: 700;
 }
 
-.site-nav {
+.burger {
     display: flex;
-    gap: 12px;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.burger span {
+    width: 28px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    transform-origin: center;
+}
+
+.burger span.open:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.burger span.open:nth-child(2) {
+    opacity: 0;
+}
+
+.burger span.open:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.site-nav {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    margin-top: 12px;
     font-weight: 600;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 100%;
+}
+
+.site-nav.open {
+    display: flex;
 }
 
 .site-nav a {
-    padding: 8px 12px;
+    padding: 12px 16px;
     border-radius: 10px;
     color: var(--text);
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease;
+    text-align: left;
 }
 
 .site-nav a:hover {
     background: var(--panel-strong);
-    transform: translateY(-2px);
 }
 
 .site-footer {
@@ -456,24 +500,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .site-nav {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 8px 10px;
-        justify-content: flex-start;
-    }
-
-    .site-nav a {
-        padding: 10px 12px;
-        flex: 0 1 auto;
-    }
-
     .site-footer {
         flex-direction: column;
         align-items: flex-start;

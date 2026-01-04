@@ -1,23 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <div className="shell">
             <div className="grid-overlay" aria-hidden="true" />
             <header className="site-header">
-                <div className="brand">
-                    <span className="brand__dot" />
-                    <div>
-                        <p className="brand__eyebrow">Ephraim Mulilo</p>
-                        <p className="brand__title">Software Developer</p>
+                <div className="brand-row">
+                    <div className="brand">
+                        <span className="brand__dot" />
+                        <div>
+                            <p className="brand__eyebrow">Ephraim Mulilo</p>
+                            <p className="brand__title">Software Developer</p>
+                        </div>
                     </div>
+                    <button 
+                        className="burger" 
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Toggle menu"
+                        aria-expanded={menuOpen}
+                    >
+                        <span className={menuOpen ? 'open' : ''}></span>
+                        <span className={menuOpen ? 'open' : ''}></span>
+                        <span className={menuOpen ? 'open' : ''}></span>
+                    </button>
                 </div>
-                <nav className="site-nav">
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#education">Education</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#contact">Contact</a>
+                <nav className={`site-nav ${menuOpen ? 'open' : ''}`}>
+                    <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+                    <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+                    <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
+                    <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+                    <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
                 </nav>
             </header>
 
