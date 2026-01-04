@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             <p className="eyebrow">Backend-first, frontend-polished</p>
             <h1>Hi, I am Ephraim Mulilo</h1>
             <p className="lede">
-              Software engineer with strong CS fundamentals, shipping products that balance reliable backends with
+              Software developer with strong CS fundamentals, shipping products that balance reliable backends with
               expressive interfaces. Currently blending underwriting discipline with engineering rigor in Chililabombwe.
             </p>
             <div className="hero-actions">
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
           <div className="hero-card">
             <p className="terminal-label">~ resume/index.html</p>
             <div className="terminal">
-              <p><span className="prompt">$</span> role: Software Engineer / Underwriting Assistant</p>
+              <p><span className="prompt">$</span> role: Software Developer / Underwriting Assistant</p>
               <p><span className="prompt">$</span> focus: Python, JS, Next.js, data pipelines</p>
               <p><span className="prompt">$</span> credo: ship reliable systems with thoughtful UI</p>
               <p className="cursor-line"><span className="prompt">$</span><span className="cursor" /></p>
