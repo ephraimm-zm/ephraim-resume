@@ -1,0 +1,32 @@
+{
+  "name": "ephraim-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio showcasing projects and skills.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "react"
+  ],
+  "author": "Ephraim Mulilo",
+  "license": "MIT",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.3",
+    "@types/react": "19.2.7",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  }
+}
