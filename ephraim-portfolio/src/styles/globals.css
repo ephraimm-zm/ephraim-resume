@@ -182,6 +182,10 @@ a:hover {
     box-shadow: 0 4px 12px rgba(124, 247, 212, 0.3);
 }
 
+.resume-template {
+    display: none;
+}
+
 .site-footer {
     margin-top: 48px;
     display: flex;
@@ -532,7 +536,7 @@ a:hover {
 
 @media print {
     @page {
-        margin: 0.5in;
+        margin: 0.75in;
         size: letter;
     }
 
@@ -544,175 +548,124 @@ a:hover {
     body {
         background: white;
         color: #000;
-        font-family: 'Georgia', serif;
+        font-family: 'Calibri', 'Arial', sans-serif;
+        font-size: 11pt;
+        line-height: 1.4;
     }
 
-    .shell {
-        max-width: 100%;
-        padding: 0;
-    }
-
+    .shell,
     .grid-overlay,
     .site-header,
     .site-footer,
-    .burger,
-    .site-nav,
-    .hero-actions,
-    .hero-card,
-    .project-toggle,
-    .pdf-export,
-    .project-link {
+    main {
         display: none !important;
     }
 
-    .page {
-        margin-top: 0;
-        gap: 20px;
-    }
-
-    .hero {
-        page-break-inside: avoid;
-        margin-bottom: 20px;
-        display: block;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        margin: 0 0 8px;
-        color: #000;
-    }
-
-    .eyebrow {
-        color: #666;
-        font-size: 11px;
-        text-transform: uppercase;
-        margin: 0 0 4px;
-    }
-
-    .lede {
-        color: #333;
-        margin: 8px 0 12px;
-        font-size: 14px;
-    }
-
-    .hero-meta {
-        color: #666;
-        font-size: 12px;
-        margin: 8px 0;
-    }
-
-    .panel {
-        page-break-inside: avoid;
-        background: none;
-        border: none;
-        box-shadow: none;
+    .resume-template {
+        display: block !important;
+        max-width: 100%;
+        margin: 0;
         padding: 0;
+    }
+
+    .resume-header {
+        text-align: center;
         margin-bottom: 20px;
-    }
-
-    .panel__header h2 {
-        font-size: 18px;
-        color: #000;
-        margin: 0 0 8px;
         border-bottom: 2px solid #000;
-        padding-bottom: 4px;
+        padding-bottom: 10px;
     }
 
-    .panel__header .eyebrow {
-        display: none;
-    }
-
-    .card__subtitle,
-    .card__body {
-        color: #333;
-        font-size: 12px;
-    }
-
-    .cards {
-        display: block;
-    }
-
-    .card {
-        background: none;
-        border: none;
-        box-shadow: none;
-        padding: 0 0 12px;
-        margin-bottom: 12px;
-        page-break-inside: avoid;
-    }
-
-    .card__title {
-        font-size: 14px;
-        color: #000;
+    .resume-header h1 {
+        font-size: 20pt;
         font-weight: 700;
+        margin: 0 0 8px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .card__meta {
-        font-size: 11px;
-        color: #666;
-    }
-
-    .pill-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    .pill {
-        background: #f0f0f0;
-        border: 1px solid #ccc;
+    .resume-contact {
+        font-size: 10pt;
+        margin: 0;
         color: #333;
-        padding: 4px 8px;
-        font-size: 11px;
     }
 
-    .carousel {
-        display: block;
-    }
-
-    .project-card {
-        background: none;
-        border: 1px solid #ddd;
-        padding: 12px;
-        margin-bottom: 12px;
+    .resume-section {
+        margin-bottom: 18px;
         page-break-inside: avoid;
     }
 
-    .project-title {
-        font-size: 14px;
+    .resume-section h2 {
+        font-size: 12pt;
+        font-weight: 700;
         color: #000;
-        margin: 0 0 6px;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #000;
+        letter-spacing: 0.5px;
     }
 
-    .project-description {
-        color: #333;
-        font-size: 12px;
+    .resume-section p {
         margin: 6px 0;
-    }
-
-    .tech-details {
-        max-height: none !important;
-        margin-top: 8px;
-    }
-
-    .tech-details h4 {
-        font-size: 12px;
+        font-size: 11pt;
+        line-height: 1.4;
         color: #000;
-        margin: 0 0 6px;
     }
 
-    .pill-row {
+    .resume-item {
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+    }
+
+    .resume-item-header {
         display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
     }
 
-    .project-card__header,
-    .project-card__eyebrow {
-        display: none;
+    .resume-item-header strong {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #000;
     }
 
-    h1, h2, h3, h4 {
+    .resume-item-header span {
+        font-size: 10pt;
+        color: #333;
+        font-style: italic;
+    }
+
+    .resume-item p {
+        margin: 3px 0;
+        font-size: 11pt;
+        color: #000;
+    }
+
+    .resume-item ul {
+        margin: 6px 0 0 20px;
+        padding: 0;
+    }
+
+    .resume-item li {
+        margin: 3px 0;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #000;
+    }
+
+    .resume-item em {
+        font-style: italic;
+        color: #333;
+    }
+
+    h1, h2, h3 {
         page-break-after: avoid;
+    }
+
+    .resume-item,
+    .resume-section {
+        page-break-inside: avoid;
     }
 }
