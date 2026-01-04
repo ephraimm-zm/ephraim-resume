@@ -75,6 +75,39 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        <section className="panel" id="skills">
+          <div className="panel__header">
+            <p className="eyebrow">Skills</p>
+            <h2>Strong CS fundamentals</h2>
+          </div>
+          <div className="pill-grid">
+            {skills.map((skill) => (
+              <span className="pill" key={skill}>{skill}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="panel" id="projects">
+          <div className="panel__header">
+            <p className="eyebrow">Projects</p>
+            <h2>Interactive carousel</h2>
+            <p className="card__body">Tap a card to reveal the stack; swipe horizontally on mobile.</p>
+          </div>
+          <Carousel projects={projects} />
+        </section>
+
+        <section className="panel" id="education">
+          <div className="panel__header">
+            <p className="eyebrow">Education</p>
+            <h2>{education.degree}</h2>
+            <p className="card__subtitle">{education.school}</p>
+          </div>
+          <div className="edu">
+            <p className="card__body">Expected Graduation: {education.grad}</p>
+            <p className="card__body">Relevant coursework: {education.coursework}</p>
+          </div>
+        </section>
+
         <section className="panel" id="experience">
           <div className="panel__header">
             <p className="eyebrow">Experience</p>
@@ -92,39 +125,6 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
-
-        <section className="panel" id="skills">
-          <div className="panel__header">
-            <p className="eyebrow">Skills</p>
-            <h2>Strong CS fundamentals</h2>
-          </div>
-          <div className="pill-grid">
-            {skills.map((skill) => (
-              <span className="pill" key={skill}>{skill}</span>
-            ))}
-          </div>
-        </section>
-
-        <section className="panel" id="education">
-          <div className="panel__header">
-            <p className="eyebrow">Education</p>
-            <h2>{education.degree}</h2>
-            <p className="card__subtitle">{education.school}</p>
-          </div>
-          <div className="edu">
-            <p className="card__body">Expected Graduation: {education.grad}</p>
-            <p className="card__body">Relevant coursework: {education.coursework}</p>
-          </div>
-        </section>
-
-        <section className="panel">
-          <div className="panel__header">
-            <p className="eyebrow">Projects</p>
-            <h2>Interactive carousel</h2>
-            <p className="card__body">Tap a card to reveal the stack; swipe horizontally on mobile.</p>
-          </div>
-          <Carousel projects={projects} />
         </section>
 
         <section className="panel" id="contact">
